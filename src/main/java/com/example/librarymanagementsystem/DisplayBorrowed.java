@@ -5,6 +5,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -17,6 +19,21 @@ public class DisplayBorrowed {
     private Stage stage;
 
     private Scene scene;
+
+    @FXML
+    private TableView<?> table_borrowed;
+
+    @FXML
+    private TableColumn<?, ?> tc_StudentName;
+
+    @FXML
+    private TableColumn<?, ?> tc_bookId;
+
+    @FXML
+    private TableColumn<?, ?> tc_bookName;
+
+    @FXML
+    private TableColumn<?, ?> tc_studentId;
 
     @FXML
     void onClickBack(ActionEvent event) {

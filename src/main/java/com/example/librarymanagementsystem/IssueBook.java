@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -18,6 +19,20 @@ public class IssueBook {
 
     private Scene scene;
 
+    @FXML
+    private Button btn_issueBook;
+
+    @FXML
+    private TextField tv_bookId;
+
+    @FXML
+    private TextField tv_userId;
+
+
+    @FXML
+    void onClickIssueBook(ActionEvent event) {
+
+    }
     @FXML
     void onClickBack(ActionEvent event) {
         root = new FXMLLoader(getClass().getResource("home_page.fxml"));

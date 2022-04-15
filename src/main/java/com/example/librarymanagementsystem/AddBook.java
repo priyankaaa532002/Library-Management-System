@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 
@@ -18,6 +19,28 @@ public class AddBook {
     private Stage stage;
 
     private Scene scene;
+
+    @FXML
+    private Button btn_addBook;
+
+
+    @FXML
+    private TextField tv_authorName;
+
+    @FXML
+    private TextField tv_bookId;
+
+    @FXML
+    private TextField tv_bookName;
+
+    @FXML
+    private TextField tv_publisherName;
+
+    @FXML
+    void onClickAddBook(ActionEvent event) {
+
+    }
+
 
     @FXML
     void onClickBack(ActionEvent event) {

@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.librarymanagementsystem.DisplayBorrowed"
-            prefHeight="500.0" prefWidth="900.0">
+<AnchorPane prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.DisplayBorrowed">
     <children>
         <Button fx:id="btn_back" layoutX="840.0" layoutY="460.0" mnemonicParsing="false" onAction="#onClickBack" text="BACK" />
+        <Label layoutX="279.0" layoutY="49.0" text="BORROWED BOOKS">
+            <font>
+                <Font name="Californian FB Bold" size="36.0" />
+            </font>
+        </Label>
+      <TableView fx:id="table_borrowed" layoutX="262.0" layoutY="119.0" prefHeight="200.0" prefWidth="376.0">
+        <columns>
+          <TableColumn fx:id="tc_studentId" prefWidth="87.99996948242188" text="STUDENT ID" />
+          <TableColumn fx:id="tc_StudentName" prefWidth="120.79998779296875" text="STUDENT NAME" />
+            <TableColumn fx:id="tc_bookId" prefWidth="64.0" text="BOOK ID" />
+            <TableColumn fx:id="tc_bookName" prefWidth="88.80001831054688" text="BOOK NAME" />
+        </columns>
+      </TableView>
     </children>
 </AnchorPane>

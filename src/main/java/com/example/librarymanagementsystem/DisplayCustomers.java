@@ -5,6 +5,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -17,6 +19,24 @@ public class DisplayCustomers {
     private Stage stage;
 
     private Scene scene;
+
+    @FXML
+    private TableView<?> table_users;
+
+    @FXML
+    private TableColumn<?, ?> tc_first;
+
+    @FXML
+    private TableColumn<?, ?> tc_gender;
+
+    @FXML
+    private TableColumn<?, ?> tc_last;
+
+    @FXML
+    private TableColumn<?, ?> tc_phone;
+
+    @FXML
+    private TableColumn<?, ?> tc_userId;
 
     @FXML
     void onClickBack(ActionEvent event) {
