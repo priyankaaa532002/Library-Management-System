@@ -38,7 +38,11 @@ public class AddBook {
 
     @FXML
     void onClickAddBook(ActionEvent event) {
-
+        String name = tv_bookName.getText();
+        String author = tv_authorName.getText();
+        int id = Integer.parseInt(tv_bookId.getText());
+        String pub = tv_publisherName.getText();
+        DataBase.insertBook(id,name,author,pub);
     }
 
 

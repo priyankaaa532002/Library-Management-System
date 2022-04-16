@@ -59,7 +59,17 @@ public class AddCustomer {
 
     @FXML
     void onClickAddCustomer(ActionEvent event) {
-
+        String name = tv_fName.getText();
+        String last = tv_lName.getText();
+        int id = Integer.parseInt(tv_userId.getText());
+        String gender = "";
+        if(tb_male.isSelected()){
+            gender = "Male";
+        }else {
+            gender = "Female";
+        }
+        String phone = tv_phoneNo.getText();
+        DataBase.insertUser(id,name,last,gender,phone);
     }
 
 }
