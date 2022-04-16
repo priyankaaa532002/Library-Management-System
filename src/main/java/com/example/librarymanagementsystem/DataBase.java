@@ -26,4 +26,12 @@ public class DataBase {
             System.out.println(e);
         }
     }
+
+    public static void insertBorrowed(int user_id,String user,int book_id,String book){
+
+    }
+
+    public static void displayUser(){
+
+    }
 }
