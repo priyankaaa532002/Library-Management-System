@@ -37,6 +37,28 @@ public class AddBook {
     private TextField tv_publisherName;
 
     @FXML
+    private Button btn_deleteBook;
+
+    @FXML
+    private Button btn_updateBook;
+
+    @FXML
+    void onClickDeleteBook(ActionEvent event) {
+        int id = Integer.parseInt(tv_bookId.getText());
+        DataBase.deleteBook(id);
+    }
+
+    @FXML
+    void onClickUpdateBook(ActionEvent event) {
+        String name = tv_bookName.getText();
+        String author = tv_authorName.getText();
+        int id = Integer.parseInt(tv_bookId.getText());
+        String pub = tv_publisherName.getText();
+        DataBase.updateBook(id,name,author,pub);
+    }
+
+
+    @FXML
     void onClickAddBook(ActionEvent event) {
         String name = tv_bookName.getText();
         String author = tv_authorName.getText();

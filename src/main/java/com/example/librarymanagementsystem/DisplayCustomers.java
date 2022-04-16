@@ -40,7 +40,39 @@ public class DisplayCustomers implements Initializable {
     private TextField tv_search;
     @FXML
     void onClickSearch(ActionEvent event) {
+        table_users.setItems(items);
+        String search = tv_search.getText();
+        tc_userId.setCellValueFactory(new PropertyValueFactory<User,Integer>("id"));
+        tc_first.setCellValueFactory(new PropertyValueFactory<User,String>("name"));
+        tc_last.setCellValueFactory(new PropertyValueFactory<User,String>("last"));
+        tc_gender.setCellValueFactory(new PropertyValueFactory<User,String>("gender"));
+        tc_phone.setCellValueFactory(new PropertyValueFactory<User,String>("phone"));
+        try
+        {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/library","root","");
+            PreparedStatement statement;
+            if(search.isBlank()){
+                statement = con.prepareStatement("select * from user");
+            }else{
+                statement = con.prepareStatement("select * from user where fName = '"+ search +"'");
+            }
+            ResultSet rs = statement.executeQuery();
+            items.clear();
+            table_users.getItems().clear();
 
+            while(rs.next()) {
+                int s1 = rs.getInt(1);
+                String s2 = rs.getString(2);
+                String  s3 = rs.getString(3);
+                String s4 = rs.getString(4);
+                String s5 = rs.getString(5);
+                User stu =new User(s1, s2, s3, s4,s5);
+                items.add(stu);
+                System.out.println(s1 + " " + s2 + " " + s3 + " " + s4);
+            }
+            con.close();
+        }catch(Exception e ){}
     }
 
     @FXML

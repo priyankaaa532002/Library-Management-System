@@ -58,6 +58,12 @@ public class AddCustomer {
     private TextField tv_userId;
 
     @FXML
+    private Button btn_deleteUser;
+
+    @FXML
+    private Button btn_updateUser;
+
+    @FXML
     void onClickAddCustomer(ActionEvent event) {
         String name = tv_fName.getText();
         String last = tv_lName.getText();
@@ -72,4 +78,24 @@ public class AddCustomer {
         DataBase.insertUser(id,name,last,gender,phone);
     }
 
+    @FXML
+    void onClickDeleteCustomer(ActionEvent event) {
+        int id = Integer.parseInt(tv_userId.getText());
+        DataBase.deleteUser(id);
+    }
+
+    @FXML
+    void onClickUpdateCustomer(ActionEvent event) {
+        int id = Integer.parseInt(tv_userId.getText());
+        String name = tv_fName.getText();
+        String last = tv_lName.getText();
+        String gender = "";
+        if(tb_male.isSelected()){
+            gender = "Male";
+        }else {
+            gender = "Female";
+        }
+        String phone = tv_phoneNo.getText();
+        DataBase.updateUser(id,name,last,gender,phone);
+    }
 }

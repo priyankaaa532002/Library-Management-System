@@ -6,17 +6,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.HomePage" style=" -fx-border-color:black; -fx-border-width: 5; -fx-border-style: solid;">
+<AnchorPane prefHeight="500.0" prefWidth="900.0" style=" -fx-border-color:black; -fx-border-width: 5; -fx-border-style: solid;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.HomePage">
    <children>
       <Label layoutX="266.0" layoutY="27.0" text="Welcome to Bloi Library">
          <font>
             <Font name="Californian FB Bold" size="36.0" />
          </font>
       </Label>
-      <Button fx:id="btn_addCustomer" layoutX="410.0" layoutY="111.0" mnemonicParsing="false" onAction="#onClickAddCustomer" text="ADD USER" />
+      <Button fx:id="btn_addCustomer" layoutX="366.0" layoutY="111.0" mnemonicParsing="false" onAction="#onClickAddCustomer" text="ADD/IPDATE/DELETE USER" />
       <Button fx:id="btn_issueBook" layoutX="405.0" layoutY="177.0" mnemonicParsing="false" onAction="#onClickIssue" text="ISSUE BOOK" />
-      <Button fx:id="btn_addBooks" layoutX="408.0" layoutY="145.0" mnemonicParsing="false" onAction="#onClickAddBook" text="ADD BOOK" />
+      <Button fx:id="btn_addBooks" layoutX="364.0" layoutY="145.0" mnemonicParsing="false" onAction="#onClickAddBook" text="ADD/IPDATE/DELETE BOOK" />
       <Button fx:id="btn_returnBook" layoutX="398.0" layoutY="211.0" mnemonicParsing="false" onAction="#onClickReturn" text="RETURN BOOK" />
       <Button fx:id="btn_displayCustomers" layoutX="225.0" layoutY="327.0" mnemonicParsing="false" onAction="#onClickDisplayCustomer" text="DISPLAY USERS">
          <font>

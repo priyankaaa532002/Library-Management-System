@@ -8,10 +8,10 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane style=" -fx-border-color:black; -fx-border-width: 5; -fx-border-style: solid;" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.AddCustomer">
+<AnchorPane prefHeight="500.0" prefWidth="900.0" style=" -fx-border-color:black; -fx-border-width: 5; -fx-border-style: solid;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.AddCustomer">
     <children>
         <Button fx:id="btn_back" layoutX="840.0" layoutY="460.0" mnemonicParsing="false" onAction="#onClickBack" text="BACK" />
-        <Label layoutX="297.0" layoutY="50.0" text="ADD CUSTOMER">
+        <Label layoutX="210.0" layoutY="52.0" text="ADD/UPDATE/DELETE USER">
             <font>
                 <Font name="Californian FB Bold" size="36.0" />
             </font>
@@ -45,12 +45,14 @@
          </toggleGroup>
       </RadioButton>
       <RadioButton fx:id="tb_female" layoutX="483.0" layoutY="211.0" mnemonicParsing="false" text="Female" toggleGroup="$gender" />
-      <Button fx:id="btn_addCustomer" layoutX="363.0" layoutY="309.0" mnemonicParsing="false" onAction="#onClickAddCustomer" text="ADD CUSTOMER" />
+      <Button fx:id="btn_addCustomer" layoutX="231.0" layoutY="320.0" mnemonicParsing="false" onAction="#onClickAddCustomer" text="ADD USER" />
       <Label layoutX="303.0" layoutY="131.0" text="User Id:">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
       <TextField fx:id="tv_userId" layoutX="407.0" layoutY="127.0" />
+      <Button fx:id="btn_updateUser" layoutX="381.0" layoutY="320.0" mnemonicParsing="false" onAction="#onClickUpdateCustomer" text="UPDATE USER" />
+      <Button fx:id="btn_deleteUser" layoutX="557.0" layoutY="320.0" mnemonicParsing="false" onAction="#onClickDeleteCustomer" text="DELETE" />
     </children>
 </AnchorPane>
