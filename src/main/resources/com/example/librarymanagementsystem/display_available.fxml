@@ -4,32 +4,33 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<?import javafx.scene.control.TextField?>
-<AnchorPane style=" -fx-border-color:black; -fx-border-width: 5; -fx-border-style: solid;" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.DisplayAvailable">
+<AnchorPane prefHeight="500.0" prefWidth="900.0" style=" -fx-border-color:#6A5ACD; -fx-border-width: 5; -fx-border-style: solid;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.DisplayAvailable">
     <children>
-        <Button fx:id="btn_back" layoutX="840.0" layoutY="460.0" mnemonicParsing="false" onAction="#onClickBack" text="BACK" />
-        <Label layoutX="288.0" layoutY="49.0" text="AVAILABLE BOOKS">
+        <Button fx:id="btn_back" layoutX="827.0" layoutY="449.0" mnemonicParsing="false" onAction="#onClickBack" style="-fx-border-color: #48 #6A5ACD3D8B; -fx-border-radius: 5; -fx-background-color: #6A5ACD;" text="BACK" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Button>
+        <Label layoutX="288.0" layoutY="49.0" text="AVAILABLE BOOKS" textFill="DARKSLATEBLUE">
             <font>
                 <Font name="Californian FB Bold" size="36.0" />
             </font>
         </Label>
-      <TableView fx:id="tv_tableBooks" layoutX="254.0" layoutY="118.0" prefHeight="200.0" prefWidth="392.0">
+      <TableView fx:id="tv_tableBooks" layoutX="133.0" layoutY="118.0" prefHeight="200.0" prefWidth="686.0">
         <columns>
-          <TableColumn fx:id="tc_bookId" prefWidth="75.0" text="BOOK ID" />
-          <TableColumn fx:id="tc_bookName" prefWidth="132.79998779296875" text="BOOK NAME" />
-            <TableColumn fx:id="tc_author" prefWidth="91.19998168945312" text="AUTHOR" />
-            <TableColumn fx:id="tc_publisher" prefWidth="91.20001220703125" text="PUBLISHER" />
+          <TableColumn fx:id="tc_bookId" prefWidth="136.80001831054688" text="BOOK ID" />
+          <TableColumn fx:id="tc_bookName" prefWidth="195.20001220703125" text="BOOK NAME" />
+            <TableColumn fx:id="tc_author" minWidth="0.0" prefWidth="172.80001831054688" text="AUTHOR" />
+            <TableColumn fx:id="tc_publisher" minWidth="0.0" prefWidth="182.39996337890625" text="PUBLISHER" />
         </columns>
       </TableView>
-        <Label layoutX="199.0" layoutY="376.0" text="Search Book">
-            <font>
-                <Font name="System Bold" size="17.0" />
-            </font>
-        </Label>
-        <TextField fx:id="tv_search" layoutX="309.0" layoutY="376.0" />
-        <Button fx:id="btn_search" layoutX="478.0" layoutY="376.0" mnemonicParsing="false" onAction="#onClickSearch" text="Search" />
+        <TextField fx:id="tv_search" layoutX="137.0" layoutY="365.0" prefHeight="38.0" prefWidth="312.0" promptText="Enter name of book" />
+        <Button fx:id="btn_search" layoutX="465.0" layoutY="365.0" mnemonicParsing="false" onAction="#onClickSearch" style="-fx-border-color: #48 #6A5ACD3D8B; -fx-border-radius: 5; -fx-background-color: #6A5ACD;" text="SEARCH" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Button>
     </children>
 </AnchorPane>

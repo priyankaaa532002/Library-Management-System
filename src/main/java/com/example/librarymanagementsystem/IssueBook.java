@@ -31,7 +31,9 @@ public class IssueBook {
 
     @FXML
     void onClickIssueBook(ActionEvent event) {
-
+        int bookId = Integer.parseInt(tv_bookId.getText());
+        int userId = Integer.parseInt(tv_userId.getText());
+        DataBase.issueBook(userId,bookId);
     }
     @FXML
     void onClickBack(ActionEvent event) {

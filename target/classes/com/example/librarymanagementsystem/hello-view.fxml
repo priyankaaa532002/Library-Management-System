@@ -10,34 +10,34 @@
 
 <!---->
 
-<AnchorPane style=" -fx-border-color:black; -fx-border-width: 5; -fx-border-style: solid;" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="900.0" style=" -fx-border-color:#6A5ACD; -fx-border-width: 5; -fx-border-style: solid;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.HelloController">
    <children>
-      <Label layoutX="168.0" layoutY="38.0" prefHeight="56.0" prefWidth="634.0" text="Library Management System" textAlignment="CENTER">
+      <Label layoutX="168.0" layoutY="38.0" prefHeight="56.0" prefWidth="634.0" text="Library Management System" textAlignment="CENTER" textFill="DARKSLATEBLUE">
          <font>
             <Font name="Californian FB Bold" size="48.0" />
          </font>
       </Label>
-      <Label layoutX="307.0" layoutY="148.0" text="UserName:">
+      <Label layoutX="270.0" layoutY="144.0" text="UserName:">
          <font>
-            <Font size="24.0" />
+            <Font name="Calibri Bold" size="24.0" />
          </font></Label>
-      <Label layoutX="310.0" layoutY="183.0" text="Password: ">
+      <Label layoutX="273.0" layoutY="179.0" text="Password: ">
          <font>
-            <Font size="24.0" />
+            <Font name="Calibri Bold" size="24.0" />
          </font></Label>
-      <TextField fx:id="tv_username" layoutX="444.0" layoutY="153.0" />
-      <TextField fx:id="tv_password" layoutX="444.0" layoutY="188.0" />
-      <Button fx:id="btn_register" layoutX="310.0" layoutY="261.0" mnemonicParsing="false" onAction="#onClickRegister" text="REGISTER">
+      <TextField fx:id="tv_username" layoutX="402.0" layoutY="145.0" prefHeight="26.0" prefWidth="221.0" />
+      <TextField fx:id="tv_password" layoutX="402.0" layoutY="180.0" prefHeight="26.0" prefWidth="222.0" />
+      <Button fx:id="btn_register" layoutX="273.0" layoutY="259.0" mnemonicParsing="false" onAction="#onClickRegister" style="-fx-border-color: #6A5ACD; -fx-border-radius: 5; -fx-background-color: #6A5ACD;" text="REGISTER" textFill="WHITE">
          <font>
-            <Font size="17.0" />
+            <Font name="System Bold" size="16.0" />
          </font></Button>
-      <Button fx:id="btn_login" layoutX="413.0" layoutY="261.0" mnemonicParsing="false" onAction="#onClickLogin" text="LOGIN">
+      <Button fx:id="btn_login" layoutX="376.0" layoutY="259.0" mnemonicParsing="false" onAction="#onClickLogin" style="-fx-border-color: #6A5ACD; -fx-border-radius: 5; -fx-background-color: #6A5ACD;" text="LOGIN" textFill="WHITE">
          <font>
-            <Font size="17.0" />
+            <Font name="System Bold" size="16.0" />
          </font></Button>
-      <ImageView fx:id="imageView" fitHeight="202.0" fitWidth="164.0" layoutX="740.0" layoutY="287.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imageView" fitHeight="202.0" fitWidth="164.0" layoutX="707.0" layoutY="315.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@571-5718858_how-to-return-library-books-clipart.png" />
+            <Image url="@Screenshot%202022-04-16%20231757.png" />
          </image>
       </ImageView>
    </children>

@@ -79,8 +79,30 @@ public class DataBase {
         }
     }
 
-    public static void insertBorrowed(int user_id,String user,int book_id,String book){
+    public static void issueBook(int user_id,int book_id){
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/library", "root", "");
+            Statement statement = con.createStatement();
+            String s = "insert into borrowed (user_id,book_id) values ('"+user_id+"','"+ book_id+"')";
+            System.out.println("Inserted Successfully!");
+            statement.execute(s);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
 
+    public static void returnBook(int user_id, int book_id){
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/library", "root", "");
+            Statement statement = con.createStatement();
+            String S = "delete from borrowed where book_id = '"+book_id+"' and user_id = '"+user_id+"'";
+            System.out.println("Deleted Successfully!");
+            statement.execute(S);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 
     public static void displayUser(){

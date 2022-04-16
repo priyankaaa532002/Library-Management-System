@@ -8,51 +8,69 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="900.0" style=" -fx-border-color:black; -fx-border-width: 5; -fx-border-style: solid;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.AddCustomer">
+<AnchorPane prefHeight="500.0" prefWidth="900.0" style=" -fx-border-color:#6A5ACD; -fx-border-width: 5; -fx-border-style: solid;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.AddCustomer">
     <children>
-        <Button fx:id="btn_back" layoutX="840.0" layoutY="460.0" mnemonicParsing="false" onAction="#onClickBack" text="BACK" />
-        <Label layoutX="210.0" layoutY="52.0" text="ADD/UPDATE/DELETE USER">
+        <Button fx:id="btn_back" layoutX="835.0" layoutY="456.0" mnemonicParsing="false" onAction="#onClickBack" style="-fx-border-color: #483 #6A5ACDD8B; -fx-border-radius: 5; -fx-background-color: #6A5ACD;" text="BACK" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Button>
+        <Label layoutX="210.0" layoutY="52.0" text="ADD/UPDATE/DELETE USER" textFill="DARKSLATEBLUE">
             <font>
                 <Font name="Californian FB Bold" size="36.0" />
             </font>
         </Label>
       <Label layoutX="297.0" layoutY="157.0" text="First Name:">
          <font>
-            <Font size="18.0" />
+            <Font name="Calibri Bold" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="297.0" layoutY="239.0" text="Phone No. :">
+      <Label layoutX="299.0" layoutY="271.0" text="Phone No. :">
          <font>
-            <Font size="18.0" />
+            <Font name="Calibri Bold" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="302.0" layoutY="211.0" text="Gender:">
+      <Label layoutX="317.0" layoutY="235.0" text="Gender:">
          <font>
-            <Font size="18.0" />
+            <Font name="Calibri Bold" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="297.0" layoutY="185.0" text="Last Name:">
+      <Label layoutX="302.0" layoutY="194.0" text="Last Name:">
          <font>
-            <Font size="18.0" />
+            <Font name="Calibri Bold" size="24.0" />
          </font>
       </Label>
-      <TextField fx:id="tv_fName" layoutX="407.0" layoutY="153.0" />
-      <TextField fx:id="tv_lName" layoutX="407.0" layoutY="181.0" />
-      <TextField fx:id="tv_phoneNo" layoutX="407.0" layoutY="235.0" />
-      <RadioButton fx:id="tb_male" layoutX="407.0" layoutY="211.0" mnemonicParsing="false" text="Male">
+      <TextField fx:id="tv_fName" layoutX="435.0" layoutY="158.0" prefHeight="26.0" prefWidth="164.0" />
+      <TextField fx:id="tv_lName" layoutX="435.0" layoutY="196.0" prefHeight="26.0" prefWidth="164.0" />
+      <TextField fx:id="tv_phoneNo" layoutX="438.0" layoutY="272.0" prefHeight="26.0" prefWidth="164.0" />
+      <RadioButton fx:id="tb_male" layoutX="435.0" layoutY="237.0" mnemonicParsing="false" text="Male">
          <toggleGroup>
             <ToggleGroup fx:id="gender" />
          </toggleGroup>
-      </RadioButton>
-      <RadioButton fx:id="tb_female" layoutX="483.0" layoutY="211.0" mnemonicParsing="false" text="Female" toggleGroup="$gender" />
-      <Button fx:id="btn_addCustomer" layoutX="231.0" layoutY="320.0" mnemonicParsing="false" onAction="#onClickAddCustomer" text="ADD USER" />
-      <Label layoutX="303.0" layoutY="131.0" text="User Id:">
          <font>
-            <Font size="18.0" />
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="tb_female" layoutX="511.0" layoutY="237.0" mnemonicParsing="false" text="Female" toggleGroup="$gender">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font></RadioButton>
+      <Button fx:id="btn_addCustomer" layoutX="249.0" layoutY="338.0" mnemonicParsing="false" onAction="#onClickAddCustomer" style="-fx-border-color: #483 #6A5ACDD8B; -fx-border-radius: 5; -fx-background-color: #6A5ACD;" text="ADD USER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Button>
+      <Label layoutX="305.0" layoutY="121.0" text="User Id:">
+         <font>
+            <Font name="Calibri Bold" size="24.0" />
          </font>
       </Label>
-      <TextField fx:id="tv_userId" layoutX="407.0" layoutY="127.0" />
-      <Button fx:id="btn_updateUser" layoutX="381.0" layoutY="320.0" mnemonicParsing="false" onAction="#onClickUpdateCustomer" text="UPDATE USER" />
-      <Button fx:id="btn_deleteUser" layoutX="557.0" layoutY="320.0" mnemonicParsing="false" onAction="#onClickDeleteCustomer" text="DELETE" />
+      <TextField fx:id="tv_userId" layoutX="435.0" layoutY="122.0" prefHeight="26.0" prefWidth="164.0" />
+      <Button fx:id="btn_updateUser" layoutX="399.0" layoutY="338.0" mnemonicParsing="false" onAction="#onClickUpdateCustomer" style="-fx-border-color: #483 #6A5ACDD8B; -fx-border-radius: 5; -fx-background-color: #6A5ACD;" text="UPDATE USER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Button>
+      <Button fx:id="btn_deleteUser" layoutX="575.0" layoutY="338.0" mnemonicParsing="false" onAction="#onClickDeleteCustomer" style="-fx-border-color: #483 #6A5ACDD8B; -fx-border-radius: 5; -fx-background-color: #6A5ACD;" text="DELETE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Button>
     </children>
 </AnchorPane>

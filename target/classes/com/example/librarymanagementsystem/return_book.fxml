@@ -6,18 +6,30 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane style=" -fx-border-color:black; -fx-border-width: 5; -fx-border-style: solid;" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.ReturnBook">
+<AnchorPane prefHeight="500.0" prefWidth="900.0" style=" -fx-border-color:#6A5ACD; -fx-border-width: 5; -fx-border-style: solid;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.ReturnBook">
     <children>
-        <Button fx:id="btn_back" layoutX="840.0" layoutY="460.0" mnemonicParsing="false" onAction="#onClickBack" text="BACK" />
-        <Label layoutX="350.0" layoutY="48.0" text="RETURN BOOK">
+        <Button fx:id="btn_back" layoutX="822.0" layoutY="447.0" mnemonicParsing="false" onAction="#onClickBack" style="-fx-border-color: #6A5ACD; -fx-border-radius: 5; -fx-background-color: #6A5ACD;" text="BACK" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Button>
+        <Label layoutX="344.0" layoutY="49.0" text="RETURN BOOK" textFill="DARKSLATEBLUE">
             <font>
                 <Font name="Californian FB Bold" size="36.0" />
             </font>
         </Label>
-        <Label layoutX="287.0" layoutY="143.0" text="Enter Book ID:" />
-        <TextField fx:id="tv_bookId" layoutX="392.0" layoutY="139.0" />
-        <Label layoutX="287.0" layoutY="181.0" text="Enter User ID:" />
-        <TextField fx:id="tv_userId" layoutX="392.0" layoutY="177.0" />
-        <Button fx:id="btn_returnBook" layoutX="402.0" layoutY="260.0" mnemonicParsing="false" onAction="#onClickReturnBook" text="RETURN BOOK" />
+        <Label layoutX="287.0" layoutY="143.0" text="Enter Book ID:">
+         <font>
+            <Font name="Calibri Bold" size="24.0" />
+         </font></Label>
+        <TextField fx:id="tv_bookId" layoutX="447.0" layoutY="149.0" prefHeight="26.0" prefWidth="173.0" />
+        <Label layoutX="287.0" layoutY="181.0" text="Enter User ID:">
+         <font>
+            <Font name="Calibri Bold" size="24.0" />
+         </font></Label>
+        <TextField fx:id="tv_userId" layoutX="446.0" layoutY="187.0" prefHeight="26.0" prefWidth="174.0" />
+        <Button fx:id="btn_returnBook" layoutX="381.0" layoutY="250.0" mnemonicParsing="false" onAction="#onClickReturnBook" style="-fx-border-color: #6A5ACD; -fx-border-radius: 5; -fx-background-color: #6A5ACD;" text="RETURN BOOK" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Button>
     </children>
 </AnchorPane>

@@ -31,7 +31,9 @@ public class ReturnBook {
 
     @FXML
     void onClickReturnBook(ActionEvent event) {
-
+        int bookId = Integer.parseInt(tv_bookId.getText());
+        int userId = Integer.parseInt(tv_userId.getText());
+        DataBase.returnBook(userId,bookId);
     }
 
     @FXML
