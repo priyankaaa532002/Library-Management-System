@@ -6,18 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="18646d80-f436-45bf-a125-67261847ca5b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/librarymanagementsystem/AddBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/librarymanagementsystem/AddBook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/librarymanagementsystem/AddCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/librarymanagementsystem/AddCustomer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/librarymanagementsystem/DisplayAvailable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/librarymanagementsystem/DisplayAvailable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/librarymanagementsystem/DisplayBorrowed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/librarymanagementsystem/DisplayBorrowed.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/librarymanagementsystem/DisplayCustomers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/librarymanagementsystem/DisplayCustomers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/librarymanagementsystem/IssueBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/librarymanagementsystem/IssueBook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/librarymanagementsystem/ReturnBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/librarymanagementsystem/ReturnBook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/add_book.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/add_book.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/add_customer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/add_customer.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/display_available.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/display_available.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/display_borrowed.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/display_borrowed.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/display_customers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/display_customers.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/home_page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/home_page.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/issue_book.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/issue_book.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/return_book.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/return_book.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/librarymanagementsystem/add_book.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/librarymanagementsystem/add_book.fxml" afterDir="false" />
@@ -57,6 +55,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -97,6 +96,7 @@
       <workItem from="1649913163493" duration="2307000" />
       <workItem from="1649995973752" duration="6513000" />
       <workItem from="1650018757527" duration="4520000" />
+      <workItem from="1650079834332" duration="4366000" />
     </task>
     <servers />
   </component>

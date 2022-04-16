@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -19,6 +20,15 @@ public class DisplayCustomers {
     private Stage stage;
 
     private Scene scene;
+
+    @FXML
+    private Button btn_search;
+    @FXML
+    private TextField tv_search;
+    @FXML
+    void onClickSearch(ActionEvent event) {
+
+    }
 
     @FXML
     private TableView<?> table_users;

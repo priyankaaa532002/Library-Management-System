@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.IssueBook">
+<AnchorPane style=" -fx-border-color:black; -fx-border-width: 5; -fx-border-style: solid;" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.IssueBook">
     <children>
         <Button fx:id="btn_back" layoutX="840.0" layoutY="460.0" mnemonicParsing="false" onAction="#onClickBack" text="BACK" />
         <Label layoutX="350.0" layoutY="48.0" text="ISSUE BOOK">
