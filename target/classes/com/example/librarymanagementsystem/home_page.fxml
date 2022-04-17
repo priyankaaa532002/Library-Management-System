@@ -8,9 +8,9 @@
 
 <AnchorPane prefHeight="500.0" prefWidth="900.0" style=" -fx-border-color:#6A5ACD; -fx-border-width: 5; -fx-border-style: solid;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.HomePage">
    <children>
-      <Label layoutX="266.0" layoutY="38.0" text="Welcome to Bloi Library" textFill="DARKSLATEBLUE">
+      <Label layoutX="186.0" layoutY="28.0" text="Welcome to Bloi Library" textFill="DARKSLATEBLUE">
          <font>
-            <Font name="Californian FB Bold" size="36.0" />
+            <Font name="Californian FB Bold" size="53.0" />
          </font>
       </Label>
       <Button fx:id="btn_addCustomer" layoutX="336.0" layoutY="133.0" mnemonicParsing="false" onAction="#onClickAddCustomer" style="-fx-border-radius: 5; -fx-border-color: #6A5ACD; -fx-background-color: #FFF; -fx-background-color: #6A5ACD;" text="ADD/UPDATE/DELETE USER" textFill="WHITE">
@@ -52,6 +52,11 @@
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor>
+      </Button>
+      <Button fx:id="btn_log" layoutX="785.0" layoutY="440.0" mnemonicParsing="false" onAction="#onClickLogOut" style="-fx-border-radius: 5; -fx-border-color: #6A5ACD; -fx-background-color: #FFF; -fx-background-color: #6A5ACD;" text="LOG OUT" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
       </Button>
    </children>
 </AnchorPane>

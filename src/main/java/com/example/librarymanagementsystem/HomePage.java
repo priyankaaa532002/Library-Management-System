@@ -84,6 +84,11 @@ public class HomePage {
     }
 
     @FXML
+    void onClickLogOut(ActionEvent event) {
+        System.exit(0);
+    }
+
+    @FXML
     void onClickDisplayCustomer(ActionEvent event) {
         root = new FXMLLoader(getClass().getResource("display_customers.fxml"));
         stage = (Stage) (btn_displayCustomers.getScene().getWindow());
