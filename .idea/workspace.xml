@@ -5,20 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18646d80-f436-45bf-a125-67261847ca5b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/l4R5j7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/dac25410-fc86-453f-8c25-82ad341e7d9f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/dac25410-fc86-453f-8c25-82ad341e7d9f.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/librarymanagementsystem/AddCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/librarymanagementsystem/AddCustomer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/librarymanagementsystem/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/librarymanagementsystem/DataBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/librarymanagementsystem/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/librarymanagementsystem/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/librarymanagementsystem/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/librarymanagementsystem/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/add_book.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/add_book.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/add_customer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/add_customer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/display_available.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/display_available.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/display_borrowed.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/display_borrowed.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/display_customers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/display_customers.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/hello-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/home_page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/home_page.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/issue_book.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/issue_book.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/return_book.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem/return_book.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/librarymanagementsystem/add_customer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/librarymanagementsystem/add_customer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/librarymanagementsystem/AddCustomer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/librarymanagementsystem/AddCustomer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/librarymanagementsystem/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/librarymanagementsystem/HelloController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/librarymanagementsystem/HomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/librarymanagementsystem/HomePage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/librarymanagementsystem/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/librarymanagementsystem/hello-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/librarymanagementsystem/home_page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/librarymanagementsystem/home_page.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/librarymanagementsystem/return_book.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/librarymanagementsystem/return_book.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +41,7 @@
       <list>
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -60,12 +69,26 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/com/example/librarymanagementsystem" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
     <property name="typescript.add.unambiguous.imports.on.the.fly" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\priya\Desktop\GITHUB\Library-Management-System\src\main\resources\com\example\librarymanagementsystem" />
+      <recent name="C:\Users\priya\Desktop\GITHUB\Library-Management-System\src\main\resources\com\example\librarymanagementsystem\Images" />
+      <recent name="C:\Users\priya\Desktop\GITHUB\Library-Management-System\src\main" />
+      <recent name="C:\Users\priya\Desktop\GITHUB\Library-Management-System\src\Images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\priya\Desktop\GITHUB\Library-Management-System\src\main\resources\com\example\librarymanagementsystem" />
+      <recent name="C:\Users\priya\Desktop\GITHUB\Library-Management-System\src\Images" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -104,6 +127,13 @@
       <workItem from="1650119914459" duration="12305000" />
       <workItem from="1650166555880" duration="2384000" />
       <workItem from="1650169707189" duration="7946000" />
+      <workItem from="1650189419237" duration="650000" />
+      <workItem from="1650869061797" duration="315000" />
+      <workItem from="1650869414363" duration="3000" />
+      <workItem from="1650882712114" duration="290000" />
+      <workItem from="1650998001597" duration="1903000" />
+      <workItem from="1651027806573" duration="5180000" />
+      <workItem from="1651039076675" duration="5757000" />
     </task>
     <servers />
   </component>

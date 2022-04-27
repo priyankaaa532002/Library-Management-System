@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="900.0" style=" -fx-border-color:#6A5ACD; -fx-border-width: 5; -fx-border-style: solid;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.DisplayCustomers">
+<AnchorPane prefHeight="400" prefWidth="800" style=" -fx-border-color:#6A5ACD; -fx-border-width: 5; -fx-border-style: solid;" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.DisplayCustomers">
     <children>
         <Button fx:id="btn_back" layoutX="822.0" layoutY="448.0" mnemonicParsing="false" onAction="#onClickBack" style="-fx-border-color: #6A5ACD; -fx-border-radius: 5; -fx-background-color: #6A5ACD;" text="BACK" textFill="WHITE">
          <font>

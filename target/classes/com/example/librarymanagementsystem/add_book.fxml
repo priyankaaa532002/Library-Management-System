@@ -3,55 +3,62 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="900.0" style="-fx-border-color: #6A5ACD; -fx-border-width: 5; -fx-border-style: solid;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.AddBook">
+<AnchorPane prefHeight="400" prefWidth="800" style=" -fx-border-color:#6A5ACD; -fx-border-width: 5; -fx-border-style: solid;" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.AddBook">
    <children>
       <Button fx:id="btn_back" layoutX="822.0" layoutY="443.0" mnemonicParsing="false" onAction="#onClickBack" style="-fx-border-color: #6A5ACD; -fx-background-color: #6A5ACD; -fx-border-width: 1; -fx-border-radius: 5;" text="BACK" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font></Button>
-      <Label layoutX="374.0" layoutY="42.0" text="ADD BOOK" textFill="DARKSLATEBLUE">
+      <Label layoutX="361.0" layoutY="39.0" text="ADD BOOK" textFill="DARKSLATEBLUE">
          <font>
-            <Font name="Californian FB Bold" size="36.0" />
+            <Font name="Bell MT Bold" size="36.0" />
          </font>
       </Label>
-      <Label layoutX="255.0" layoutY="149.0" text="Book Name: ">
-         <font>
-            <Font name="Calibri Bold" size="24.0" />
-         </font>
-      </Label>
-      <Label layoutX="255.0" layoutY="186.0" text="Author Name:">
+      <Label layoutX="132.0" layoutY="143.0" text="Book Name: ">
          <font>
             <Font name="Calibri Bold" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="255.0" layoutY="222.0" text="Publisher Name:">
+      <Label layoutX="132.0" layoutY="180.0" text="Author Name:">
          <font>
             <Font name="Calibri Bold" size="24.0" />
          </font>
       </Label>
-      <TextField fx:id="tv_bookName" layoutX="474.0" layoutY="151.0" />
-      <TextField fx:id="tv_authorName" layoutX="474.0" layoutY="187.0" />
-      <TextField fx:id="tv_publisherName" layoutX="474.0" layoutY="223.0" />
-      <Button fx:id="btn_addBook" layoutX="236.0" layoutY="334.0" mnemonicParsing="false" onAction="#onClickAddBook" style="-fx-border-color: #6A5ACD; -fx-background-color: #6A5ACD; -fx-border-width: 1; -fx-border-radius: 5;" text="ADD BOOK" textFill="WHITE">
+      <Label layoutX="132.0" layoutY="216.0" text="Publisher Name:">
+         <font>
+            <Font name="Calibri Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tv_bookName" layoutX="351.0" layoutY="145.0" />
+      <TextField fx:id="tv_authorName" layoutX="351.0" layoutY="181.0" />
+      <TextField fx:id="tv_publisherName" layoutX="351.0" layoutY="217.0" />
+      <Button fx:id="btn_addBook" layoutX="113.0" layoutY="328.0" mnemonicParsing="false" onAction="#onClickAddBook" style="-fx-border-color: #6A5ACD; -fx-background-color: #6A5ACD; -fx-border-width: 1; -fx-border-radius: 5;" text="ADD BOOK" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font></Button>
-      <Label layoutX="255.0" layoutY="113.0" text="Book Id: ">
+      <Label layoutX="132.0" layoutY="107.0" text="Book Id: ">
          <font>
             <Font name="Calibri Bold" size="24.0" />
          </font>
       </Label>
-      <TextField fx:id="tv_bookId" layoutX="474.0" layoutY="115.0" />
-      <Button fx:id="btn_updateBook" layoutX="374.0" layoutY="334.0" mnemonicParsing="false" onAction="#onClickUpdateBook" style="-fx-border-color: #6A5ACD; -fx-background-color: #6A5ACD; -fx-border-width: 1; -fx-border-radius: 5;" text="UPDATE BOOK" textFill="WHITE">
+      <TextField fx:id="tv_bookId" layoutX="351.0" layoutY="109.0" />
+      <Button fx:id="btn_updateBook" layoutX="251.0" layoutY="328.0" mnemonicParsing="false" onAction="#onClickUpdateBook" style="-fx-border-color: #6A5ACD; -fx-background-color: #6A5ACD; -fx-border-width: 1; -fx-border-radius: 5;" text="UPDATE BOOK" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font></Button>
-      <Button fx:id="btn_deleteBook" layoutX="550.0" layoutY="334.0" mnemonicParsing="false" onAction="#onClickDeleteBook" style="-fx-border-color: #6A5ACD; -fx-background-color: #6A5ACD; -fx-border-width: 1; -fx-border-radius: 5;" text="DELETE BOOK" textFill="WHITE">
+      <Button fx:id="btn_deleteBook" layoutX="427.0" layoutY="328.0" mnemonicParsing="false" onAction="#onClickDeleteBook" style="-fx-border-color: #6A5ACD; -fx-background-color: #6A5ACD; -fx-border-width: 1; -fx-border-radius: 5;" text="DELETE BOOK" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font></Button>
+      <ImageView fitHeight="262.0" fitWidth="267.0" layoutX="600.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@istockphoto-950962136-612x612-removebg-preview.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

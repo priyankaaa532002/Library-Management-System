@@ -12,16 +12,22 @@ public class DataBase {
         alert.show();
     }
     public static void insertUser(int user_id,String fName,String lName, String gender , String phone){
+        boolean present = false;
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/library", "root", "");
             Statement statement = con.createStatement();
             String S = "insert into user (user_id, fName, lName, gender, mobile) values ('"+user_id+"','"+ fName +"','"+lName+"','"+gender+"', '"+phone+"')";
             System.out.println("Inserted Successfully!");
-            showMessage("Inserted Successfully!", Alert.AlertType.NONE);
             statement.execute(S);
-        } catch (Exception e) {
+        }  catch(SQLIntegrityConstraintViolationException sql) {
+            present = true;
+            showMessage("User already exists!", Alert.AlertType.ERROR);
+        }   catch (Exception e) {
             System.out.println(e);
+        }
+        if(present == false) {
+            showMessage("Inserted Successfully!", Alert.AlertType.NONE);
         }
     }
 
@@ -81,16 +87,23 @@ public class DataBase {
     }
 
     public static void insertBook(int book_id,String name,String author, String publisher){
+        boolean present = false;
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/library", "root", "");
             Statement statement = con.createStatement();
             String insertS = "insert into book (book_id, name , author, publisher) values ('"+book_id+"','"+ name +"','"+author+"','"+publisher+"')";
+            statement.execute(insertS);
+        } catch(SQLIntegrityConstraintViolationException sql) {
+            showMessage("Book already inserted!", Alert.AlertType.ERROR);
+            present = true;
+        } catch(Exception e) {
+            System.out.println(e);
+        }
+
+        if(present == false) {
             System.out.println("Inserted Successfully!");
             showMessage("Inserted Successfully!", Alert.AlertType.NONE);
-            statement.execute(insertS);
-        } catch (Exception e) {
-            System.out.println(e);
         }
     }
 

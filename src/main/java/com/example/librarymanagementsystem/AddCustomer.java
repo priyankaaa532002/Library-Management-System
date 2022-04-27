@@ -4,10 +4,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.*;
+import javafx.scene.layout.Region;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -63,6 +61,11 @@ public class AddCustomer {
     @FXML
     private Button btn_updateUser;
 
+    private static void showMessage(String content, Alert.AlertType type) {
+        Alert alert = new Alert(type, content, ButtonType.OK);
+        alert.getDialogPane().setMinHeight(Region.USE_PREF_SIZE);
+        alert.show();
+    }
 
 
     @FXML
@@ -77,7 +80,12 @@ public class AddCustomer {
             gender = "Female";
         }
         String phone = tv_phoneNo.getText();
-        DataBase.insertUser(id,name,last,gender,phone);
+        if(phone.length()!=10){
+            showMessage("Enter valid phone number", Alert.AlertType.NONE);
+        }else{
+            DataBase.insertUser(id,name,last,gender,phone);
+        }
+
     }
 
     @FXML
@@ -98,6 +106,11 @@ public class AddCustomer {
             gender = "Female";
         }
         String phone = tv_phoneNo.getText();
-        DataBase.updateUser(id,name,last,gender,phone);
+        if(phone.length()!=10){
+            showMessage("Enter valid phone number", Alert.AlertType.NONE);
+        }else{
+            DataBase.updateUser(id,name,last,gender,phone);
+        }
+
     }
 }

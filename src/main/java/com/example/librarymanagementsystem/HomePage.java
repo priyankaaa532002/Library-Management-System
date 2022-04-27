@@ -15,6 +15,9 @@ public class HomePage {
     private Button btn_addBooks;
 
     @FXML
+    private Button btn_log;
+
+    @FXML
     private Button btn_addCustomer;
 
     @FXML
@@ -85,7 +88,13 @@ public class HomePage {
 
     @FXML
     void onClickLogOut(ActionEvent event) {
-        System.exit(0);
+        root = new FXMLLoader(getClass().getResource("hello-view.fxml"));
+        stage = (Stage) (btn_log.getScene().getWindow());
+        try {
+            stage.setScene(new Scene(root.load()));
+        } catch (IOException e) {
+            System.out.println(e);
+        }
     }
 
     @FXML

@@ -6,30 +6,30 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="900.0" style=" -fx-border-color:#6A5ACD; -fx-border-width: 5; -fx-border-style: solid;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.HomePage">
+<AnchorPane prefHeight="516.0" prefWidth="924.0" style=" -fx-border-color:#6A5ACD; -fx-border-width: 5; -fx-border-style: solid;" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.HomePage">
    <children>
-      <Label layoutX="186.0" layoutY="28.0" text="Welcome to Bloi Library" textFill="DARKSLATEBLUE">
+      <Label alignment="CENTER" layoutX="99.0" layoutY="14.0" prefHeight="73.0" prefWidth="690.0" text="Welcome to XYZ Library" textFill="DARKSLATEBLUE">
          <font>
             <Font name="Californian FB Bold" size="53.0" />
          </font>
       </Label>
-      <Button fx:id="btn_addCustomer" layoutX="336.0" layoutY="133.0" mnemonicParsing="false" onAction="#onClickAddCustomer" style="-fx-border-radius: 5; -fx-border-color: #6A5ACD; -fx-background-color: #FFF; -fx-background-color: #6A5ACD;" text="ADD/UPDATE/DELETE USER" textFill="WHITE">
+      <Button fx:id="btn_addCustomer" layoutX="336.0" layoutY="121.0" mnemonicParsing="false" onAction="#onClickAddCustomer" style="-fx-border-radius: 5; -fx-border-color: #6A5ACD; -fx-background-color: #FFF; -fx-background-color: #6A5ACD;" text="ADD/UPDATE/DELETE USER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font></Button>
-      <Button fx:id="btn_issueBook" layoutX="319.0" layoutY="250.0" mnemonicParsing="false" onAction="#onClickIssue" style="-fx-border-radius: 5; -fx-border-color: #6A5ACD; -fx-background-color: #FFF; -fx-background-color: #6A5ACD;" text="ISSUE BOOK" textFill="WHITE">
+      <Button fx:id="btn_issueBook" layoutX="319.0" layoutY="238.0" mnemonicParsing="false" onAction="#onClickIssue" style="-fx-border-radius: 5; -fx-border-color: #6A5ACD; -fx-background-color: #FFF; -fx-background-color: #6A5ACD;" text="ISSUE BOOK" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font></Button>
-      <Button fx:id="btn_addBooks" layoutX="333.0" layoutY="187.0" mnemonicParsing="false" onAction="#onClickAddBook" style="-fx-border-radius: 5; -fx-border-color: #6A5ACD; -fx-background-color: #FFF; -fx-background-color: #6A5ACD;" text="ADD/UPDATE/DELETE BOOK" textFill="WHITE">
+      <Button fx:id="btn_addBooks" layoutX="333.0" layoutY="175.0" mnemonicParsing="false" onAction="#onClickAddBook" style="-fx-border-radius: 5; -fx-border-color: #6A5ACD; -fx-background-color: #FFF; -fx-background-color: #6A5ACD;" text="ADD/UPDATE/DELETE BOOK" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font></Button>
-      <Button fx:id="btn_returnBook" layoutX="451.0" layoutY="250.0" mnemonicParsing="false" onAction="#onClickReturn" style="-fx-border-radius: 5; -fx-border-color: #6A5ACD; -fx-background-color: #FFF; -fx-background-color: #6A5ACD;" text="RETURN BOOK" textFill="WHITE">
+      <Button fx:id="btn_returnBook" layoutX="451.0" layoutY="238.0" mnemonicParsing="false" onAction="#onClickReturn" style="-fx-border-radius: 5; -fx-border-color: #6A5ACD; -fx-background-color: #FFF; -fx-background-color: #6A5ACD;" text="RETURN BOOK" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font></Button>
-      <Button fx:id="btn_displayCustomers" layoutX="394.0" layoutY="328.0" mnemonicParsing="false" onAction="#onClickDisplayCustomer" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-border-color: #483d8b; -fx-background-color: #483d8b;" text="DISPLAY USERS" textFill="WHITE">
+      <Button fx:id="btn_displayCustomers" layoutX="394.0" layoutY="316.0" mnemonicParsing="false" onAction="#onClickDisplayCustomer" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-border-color: DARKSLATEBLUE; -fx-background-color: DARKSLATEBLUE;" text="DISPLAY USERS" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -37,7 +37,7 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </Button>
-      <Button fx:id="btn_displayAvailable" layoutX="114.0" layoutY="328.0" mnemonicParsing="false" onAction="#onClickDisplayAvailable" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-border-color: #483d8b; -fx-background-color: #483d8b;" text="DISPLAY AVAILABLE BOOKS" textFill="WHITE">
+      <Button fx:id="btn_displayAvailable" layoutX="114.0" layoutY="316.0" mnemonicParsing="false" onAction="#onClickDisplayAvailable" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-border-color: DARKSLATEBLUE; -fx-background-color: DARKSLATEBLUE;" text="DISPLAY AVAILABLE BOOKS" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -45,7 +45,7 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </Button>
-      <Button fx:id="btn_displayBorrowed" layoutX="588.0" layoutY="328.0" mnemonicParsing="false" onAction="#onClickDisplayBorrowed" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-border-color: #483d8b; -fx-background-color: #483d8b;" text="DISPLAY BORROWED BOOKS" textFill="WHITE">
+      <Button fx:id="btn_displayBorrowed" layoutX="588.0" layoutY="316.0" mnemonicParsing="false" onAction="#onClickDisplayBorrowed" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-border-color: DARKSLATEBLUE; -fx-background-color: DARKSLATEBLUE;" text="DISPLAY BORROWED BOOKS" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -53,7 +53,7 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </Button>
-      <Button fx:id="btn_log" layoutX="785.0" layoutY="440.0" mnemonicParsing="false" onAction="#onClickLogOut" style="-fx-border-radius: 5; -fx-border-color: #6A5ACD; -fx-background-color: #FFF; -fx-background-color: #6A5ACD;" text="LOG OUT" textFill="WHITE">
+      <Button fx:id="btn_log" layoutX="773.0" layoutY="421.0" mnemonicParsing="false" onAction="#onClickLogOut" style="-fx-border-radius: 5; -fx-border-color: #6A5ACD; -fx-background-color: #FFF; -fx-background-color: #6A5ACD;" text="LOG OUT" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>

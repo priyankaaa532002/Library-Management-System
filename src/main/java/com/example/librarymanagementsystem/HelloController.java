@@ -42,7 +42,10 @@ public class HelloController {
         String p = tv_password.getText();
         if(u.isBlank() || p.isBlank()){
             showMessage("User name or password can not be blank",Alert.AlertType.NONE);
-        }else {
+        }else if(p.length()<6){
+            showMessage("Password can not be less than 6 characters",Alert.AlertType.NONE);
+        }
+        else {
             int val = DataBase.login(u,p);
             System.out.println(val);
             if (val != 0){
@@ -66,6 +69,8 @@ public class HelloController {
         String p = tv_password.getText();
         if(u.isBlank() || p.isBlank()){
             showMessage("User name or password can not be blank",Alert.AlertType.NONE);
+        }else if(p.length()<6){
+            showMessage("Password can not be less than 6 characters",Alert.AlertType.NONE);
         }else {
             DataBase.register(u,p);
             root = new FXMLLoader(getClass().getResource("home_page.fxml"));
