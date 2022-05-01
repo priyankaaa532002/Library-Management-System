@@ -5,10 +5,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.Date;
 
 public class IssueBook {
     @FXML
@@ -28,12 +30,16 @@ public class IssueBook {
     @FXML
     private TextField tv_userId;
 
+    @FXML
+    private DatePicker dp_date;
+
 
     @FXML
     void onClickIssueBook(ActionEvent event) {
         int bookId = Integer.parseInt(tv_bookId.getText());
         int userId = Integer.parseInt(tv_userId.getText());
-        DataBase.issueBook(userId,bookId);
+        Date date = Date.valueOf(dp_date.getValue());
+        DataBase.issueBook(userId,bookId, date);
     }
     @FXML
     void onClickBack(ActionEvent event) {

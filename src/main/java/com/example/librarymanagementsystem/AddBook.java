@@ -4,8 +4,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Region;
 import javafx.stage.Stage;
 
 
@@ -64,7 +67,17 @@ public class AddBook {
         String author = tv_authorName.getText();
         int id = Integer.parseInt(tv_bookId.getText());
         String pub = tv_publisherName.getText();
-        DataBase.insertBook(id,name,author,pub);
+        if(name.isEmpty() || author.isEmpty()) {
+            showMessage("All Fields are required", Alert.AlertType.ERROR);
+        } else {
+            DataBase.insertBook(id, name, author, pub);
+        }
+    }
+
+    private static void showMessage(String content, Alert.AlertType type) {
+        Alert alert = new Alert(type, content, ButtonType.OK);
+        alert.getDialogPane().setMinHeight(Region.USE_PREF_SIZE);
+        alert.show();
     }
 
 

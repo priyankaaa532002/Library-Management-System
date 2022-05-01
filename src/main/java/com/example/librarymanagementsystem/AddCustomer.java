@@ -80,7 +80,9 @@ public class AddCustomer {
             gender = "Female";
         }
         String phone = tv_phoneNo.getText();
-        if(phone.length()!=10){
+        if(name.isEmpty() || last.isEmpty() || tv_userId.getText().equals("")) {
+            showMessage("Alll Feilds are required", Alert.AlertType.ERROR);
+        } else if(phone.length()!=10){
             showMessage("Enter valid phone number", Alert.AlertType.NONE);
         }else{
             DataBase.insertUser(id,name,last,gender,phone);

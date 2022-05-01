@@ -16,10 +16,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.sql.*;
 import java.util.ResourceBundle;
 
 public class DisplayBorrowed implements Initializable {
@@ -49,7 +46,7 @@ public class DisplayBorrowed implements Initializable {
                 statement = con.prepareStatement("select user_id,fname,book_id,name from " +
                         "user natural join (borrowed natural join book)");
             }else {
-                statement = con.prepareStatement("select user_id,fname,book_id,name from " +
+                statement = con.prepareStatement("select user_id,fname,book_id,name, date from " +
                         "user natural join (borrowed natural join book) where name = '"+search+"'");
             }
             ResultSet rs = statement.executeQuery();
@@ -59,13 +56,15 @@ public class DisplayBorrowed implements Initializable {
             tc_bookName.setCellValueFactory(new PropertyValueFactory<Borrowed,String>("book"));
             tc_studentId.setCellValueFactory(new PropertyValueFactory<Borrowed,Integer>("uid"));
             tc_StudentName.setCellValueFactory(new PropertyValueFactory<Borrowed,String>("user"));
+            tc_date.setCellValueFactory(new PropertyValueFactory<Borrowed,Date>("date"));
 
             while(rs.next()) {
                 int s1 = rs.getInt(1);
                 String s2 = rs.getString(2);
                 int  s3 = rs.getInt(3);
                 String s4 = rs.getString(4);
-                Borrowed b =new Borrowed(s1, s2, s3, s4);
+                Date date = rs.getDate(5);
+                Borrowed b =new Borrowed(s1, s2, s3, s4, date);
                 items.add(b);
                 System.out.println(s1 + " " + s2 + " " + s3 + " " + s4);
             }
@@ -82,6 +81,10 @@ public class DisplayBorrowed implements Initializable {
 
     @FXML
     private TableColumn<Borrowed, Integer> tc_bookId;
+
+    @FXML
+    private TableColumn<Borrowed, Date> tc_date;
+
 
     @FXML
     private TableColumn<Borrowed, String> tc_bookName;
@@ -108,7 +111,7 @@ public class DisplayBorrowed implements Initializable {
         {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/library","root","");
-            PreparedStatement statement = con.prepareStatement("select user_id,fname,book_id,name from " +
+            PreparedStatement statement = con.prepareStatement("select user_id,fname,book_id,name, date from " +
                     "user natural join (borrowed natural join book)");
             ResultSet rs = statement.executeQuery();
             items.clear();
@@ -117,18 +120,22 @@ public class DisplayBorrowed implements Initializable {
             tc_bookName.setCellValueFactory(new PropertyValueFactory<Borrowed,String>("book"));
             tc_studentId.setCellValueFactory(new PropertyValueFactory<Borrowed,Integer>("uid"));
             tc_StudentName.setCellValueFactory(new PropertyValueFactory<Borrowed,String>("user"));
+            tc_date.setCellValueFactory(new PropertyValueFactory<Borrowed,Date>("date"));
 
             while(rs.next()) {
                 int s1 = rs.getInt(1);
                 String s2 = rs.getString(2);
                 int  s3 = rs.getInt(3);
                 String s4 = rs.getString(4);
-                Borrowed b =new Borrowed(s1, s2, s3, s4);
+                Date date = rs.getDate(5);
+                Borrowed b =new Borrowed(s1, s2, s3, s4, date);
                 items.add(b);
-                System.out.println(s1 + " " + s2 + " " + s3 + " " + s4);
+                System.out.println(s1 + " " + s2 + " " + s3 + " " + s4 + " " + date);
             }
             table_borrowed.setItems(items);
             con.close();
-        }catch(Exception e ){}
+        }catch(Exception e ){
+            System.out.println(e);
+        }
     }
 }

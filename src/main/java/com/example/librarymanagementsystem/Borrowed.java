@@ -1,17 +1,26 @@
 package com.example.librarymanagementsystem;
 
+import java.sql.Date;
+
 public class Borrowed {
     int uid,bid;
     String book;
     String user;
+    Date date;
 
     Borrowed(){}
-    Borrowed(int uid, String user,int bid,String book){
+    Borrowed(int uid, String user,int bid,String book, Date date){
         this.uid = uid;
         this.bid = bid;
         this.book = book;
         this.user = user;
+        this.date = date;
     }
+
+    public Date getDate() {
+        return date;
+    }
+
     public int getUid() {
         return uid;
     }

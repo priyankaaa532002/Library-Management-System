@@ -848,37 +848,41 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <DataType>int(5)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="252" parent="240" name="user_id">
+    <column id="252" parent="239" name="date">
+      <DataType>date|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="253" parent="240" name="user_id">
       <DataType>int(5)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="253" parent="240" name="fName">
+    <column id="254" parent="240" name="fName">
       <DataType>varchar(20)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="254" parent="240" name="lName">
+    <column id="255" parent="240" name="lName">
       <DataType>varchar(20)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="255" parent="240" name="gender">
+    <column id="256" parent="240" name="gender">
       <DataType>varchar(20)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="256" parent="240" name="mobile">
+    <column id="257" parent="240" name="mobile">
       <DataType>varchar(20)|0s</DataType>
       <Position>5</Position>
     </column>
-    <key id="257" parent="240" name="PRIMARY">
+    <key id="258" parent="240" name="PRIMARY">
       <ColNames>user_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <column id="258" parent="241" name="user_name">
+    <column id="259" parent="241" name="user_name">
       <DataType>varchar(20)|0s</DataType>
       <Position>1</Position>
     </column>
-    <column id="259" parent="241" name="password">
+    <column id="260" parent="241" name="password">
       <DataType>varchar(20)|0s</DataType>
       <Position>2</Position>
     </column>

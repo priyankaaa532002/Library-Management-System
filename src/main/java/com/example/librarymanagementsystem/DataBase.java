@@ -37,9 +37,14 @@ public class DataBase {
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/library", "root", "");
             Statement statement = con.createStatement();
             String S = "update user set fName = '"+fName+"',lName = '"+lName+"', gender = '"+gender+"', mobile = '"+phone+"' where user_id = '"+user_id+"'";
-            System.out.println("Inserted Successfully!");
-            showMessage("Updated Successfully!", Alert.AlertType.NONE);
-            statement.execute(S);
+            int i = statement.executeUpdate(S);
+
+            if(i > 0) {
+                System.out.println("Inserted Successfully!");
+                showMessage("Updated Successfully!", Alert.AlertType.NONE);
+            } else {
+                showMessage("User does not exist", Alert.AlertType.NONE);
+            }
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -51,9 +56,13 @@ public class DataBase {
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/library", "root", "");
             Statement statement = con.createStatement();
             String S = "update book set name = '"+name+"',author = '"+auth+"', publisher = '"+pub+"' where book_id = '"+id+"'";
-            System.out.println("Inserted Successfully!");
-            showMessage("Updated Successfully!", Alert.AlertType.NONE);
-            statement.execute(S);
+            int i = statement.executeUpdate(S);
+            if(i > 0) {
+                showMessage("Updated Successfully!", Alert.AlertType.NONE);
+                System.out.println("Inserted Successfully!");
+            } else {
+                showMessage("Book does not exist!", Alert.AlertType.NONE);
+            }
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -65,8 +74,13 @@ public class DataBase {
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/library", "root", "");
             Statement statement = con.createStatement();
             String S = "delete from user where user_id = '"+user_id+"' ";
-            showMessage("Deleted Successfully!", Alert.AlertType.NONE);
-            statement.execute(S);
+            int i = statement.executeUpdate(S);
+
+            if(i > 0) {
+                showMessage("Deleted Successfully!", Alert.AlertType.NONE);
+            } else {
+                showMessage("User does not exist", Alert.AlertType.NONE);
+            }
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -78,9 +92,13 @@ public class DataBase {
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/library", "root", "");
             Statement statement = con.createStatement();
             String S = "delete from book where book_id = '"+book_id+"' ";
-            System.out.println("Inserted Successfully!");
-            showMessage("Deleted Successfully!", Alert.AlertType.NONE);
-            statement.execute(S);
+            int i = statement.executeUpdate(S);
+
+            if(i > 0) {
+                showMessage("Deleted Successfully!", Alert.AlertType.NONE);
+            } else {
+                showMessage("User does not exist", Alert.AlertType.NONE);
+            }
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -107,12 +125,12 @@ public class DataBase {
         }
     }
 
-    public static void issueBook(int user_id,int book_id){
+    public static void issueBook(int user_id, int book_id, Date date){
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/library", "root", "");
             Statement statement = con.createStatement();
-            String s = "insert into borrowed (user_id,book_id) values ('"+user_id+"','"+ book_id+"')";
+            String s = "insert into borrowed (user_id,book_id, date) values ('"+user_id+"','"+ book_id+"', '"+date+"')";
             System.out.println("Inserted Successfully!");
             showMessage("Book Issued!", Alert.AlertType.NONE);
             statement.execute(s);
